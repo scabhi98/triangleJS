@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var domParser = new DOMParser();
+        var string = '<div class="adder-container">\
+    <link rel="stylesheet" href="/components/adder/styles.css" />\
+    <h1>Adder</h1>\
+    <div>\
+        <input type="number" trIn="a"> +\
+        <input type="number" trIn="b"> =\
+        <span trOut="c"></span>\
+    </div>\
+</div>';
+        console.log(domParser.parseFromString(string,'text/html'));
+        var doc = domParser.parseFromString(string,'text/html');
+    </script>
+</body>
+</html>
